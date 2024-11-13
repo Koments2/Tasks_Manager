@@ -1,46 +1,103 @@
-# Getting Started with Create React App
+# Task Management Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a task management application built with **React**, **Redux**, and **TypeScript**. It allows users to manage tasks, including creating, editing, deleting, and assigning categories. The app supports uploading and previewing images, as well as tracking the status of tasks.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Project Overview](#project-overview)
+- [Installation Instructions](#installation-instructions)
+- [Usage](#usage)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm start`
+## Project Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This task management app allows users to interact with tasks through a user-friendly interface. The app includes the following key features:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Task Creation and Editing:** Users can create new tasks and edit existing ones.
+- **Image Uploading:** Users can upload images related to their tasks, which are previewed before submission.
+- **Task Status Management:** Track the status of tasks, with options like "In Progress" and "Completed."
+- **Form Validation:** Form inputs are validated, with error messages if required fields are missing.
+- **Redux State Management:** The application uses Redux for state management, particularly for handling tasks and user interactions.
 
-### `npm test`
+## Installation Instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Follow the steps below to get the application up and running locally.
 
-### `npm run build`
+1. **Clone the repository**:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    git clone https://github.com/your-username/task-management.git
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Navigate to the project directory**:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    cd task-management
+    ```
 
-### `npm run eject`
+3. **Install dependencies**:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    ```bash
+    npm install
+    ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   Or if you're using Yarn:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    ```bash
+    yarn install
+    ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. **Create an `.env` file** in the root directory and add any required environment variables (such as API URLs, etc.). Example:
 
-## Learn More
+    ```env
+    REACT_APP_API_URL=https://your-api-url.com
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. **Start the development server**:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ```bash
+    npm start
+    ```
+
+   Or if using Yarn:
+
+    ```bash
+    yarn start
+    ```
+
+   The app will be available at `http://localhost:3000`.
+
+## Usage
+
+After setting up the app, you can access the following features:
+
+- **Task List:** View a list of all tasks.
+- **Create/Edit Task:** Add or modify tasks using the provided form, which includes fields such as title, description, status, and image upload.
+- **Image Upload:** Select an image for a task. If an image is not selected, the existing image (if any) will be retained.
+- **Task Status:** Change the task status (e.g., "In Progress", "Completed").
+- **Form Validation:** Required fields (like title and description) are validated before submission.
+  Features
+  Task Form: Users can fill out a form to create or edit tasks. The form includes various field types such as text inputs, select options, and file uploads.
+  Image Preview: When a user selects an image, it is previewed in the form before submission.
+  Redux State Management: All task data, including the list of tasks, is stored and managed in the Redux store, allowing efficient state handling and updates.
+  Error Handling: The form includes validation for required fields, with error messages displayed if fields are missing.
+  Navigation: Upon successful task editing, users are redirected to the task list page.
+  Technologies Used
+  React: The frontend library used to build the user interface.
+  Redux: State management to handle tasks and application data.
+  React Hook Form: Form handling library used for managing form inputs and validation.
+  TypeScript: TypeScript is used for type safety throughout the application.
+  CSS Modules: Scoped CSS styling for each component.
+  Contributing
+  We welcome contributions! Here's how you can help:
+
+Fork the repository.
+Create a new branch (git checkout -b feature/your-feature).
+Make your changes.
+Commit your changes (git commit -m 'Add new feature').
+Push to the branch (git push origin feature/your-feature).
+Open a pull request with a detailed description of your changes.
+Please ensure your code adheres to the code style guidelines and includes tests where applicable.
