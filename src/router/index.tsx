@@ -5,6 +5,7 @@ import ErrorPage from "../components/ErrorPage";
 import App from "../App";
 import EditTask from "../components/EditTask";
 import TaskInfo from "../components/TaskInfo";
+import MainPage from "../components/MainPage";
 
 export const router = createBrowserRouter([
     {
@@ -12,6 +13,9 @@ export const router = createBrowserRouter([
         element: <App />,
         children: [
             {
+                path: 'Tasks_Manager/',
+                element: <MainPage />,
+            },{
                 path: 'tasks',
                 element: <TaskList />,
             },

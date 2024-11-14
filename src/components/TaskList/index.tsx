@@ -28,8 +28,6 @@ const TaskList = () => {
         sortBy: "id",
     });
 
-    console.log(data)
-
     // Handle changes in filters (text or select)
     const handleFilterChange = (
         e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement>
@@ -156,14 +154,14 @@ const TaskList = () => {
             <div className="table-responsive">
                 <table className="table table-bordered table-hover">
                     <thead>
-                    <tr>
+                    <tr style={{minWidth: "200px", maxWidth: '300px'}}>
                         {tableTitle.map((header, index) => (
                             <th key={index} className="text-center">
                                 {header}
                             </th>
                         ))}
                     </tr>
-                    <tr>
+                    <tr style={{minWidth: "200px", maxWidth: '300px'}}>
                         {filterDate.map(
                             ({name, placeholder, type = "text", options}, index) => (
                                 <th key={index} className="text-center">
@@ -184,7 +182,7 @@ const TaskList = () => {
                                         <input
                                             type={type}
                                             name={name}
-                                            value={filters[name] && filters[name]}
+                                            value={filters[name] || ''}
                                             onChange={handleFilterChange}
                                             placeholder={placeholder}
                                             className="form-control"

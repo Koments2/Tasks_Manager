@@ -62,7 +62,7 @@ const TActions = ({
             >
                 {Object.keys(item).map((key, idx) => (
                     <td key={idx}>
-                        <div className="text-truncate" style={{maxWidth: "200px"}}>
+                        <div className="text-truncate" style={{maxWidth: "100%"}}>
                             {item[key] !== null && item[key] !== undefined && item[key] !== "" ? (
                                 ["createdAt",].includes(key) ? (
                                     getDateFromISOString(item[key].toString())

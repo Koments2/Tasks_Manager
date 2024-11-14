@@ -2,9 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
     background-color: #f9f9f9;
-    color: #333;
+    color: #3f7bff;
     font-family: 'Arial', sans-serif;
     text-align: center;
 }
